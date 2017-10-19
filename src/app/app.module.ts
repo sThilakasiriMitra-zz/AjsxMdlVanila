@@ -8,8 +8,6 @@ import { HttpModule } from '@angular/http';
 import {APP_CONFIG, AppConfig} from './config/app.config';
 
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpLoaderFactory} from './app.translate.factory';
 
 import { AppComponent } from './app.component';
@@ -27,17 +25,8 @@ import { AppComponent } from './app.component';
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
   ],
-  exports: [
-    TranslateModule
-  ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
