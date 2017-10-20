@@ -1,15 +1,10 @@
 <mat-sidenav-container>
-  
-    <div class="wrapper">
-  
       <mat-toolbar color="primary">
         <button mat-button [matMenuTriggerFor]="appMenu"><mat-icon>menu</mat-icon> Menu</button>
         <mat-menu #appMenu="matMenu">
           <button mat-menu-item> Settings </button>
           <button mat-menu-item> Help </button>
         </mat-menu>
-  
-        
   
         <span class="hidden-sm-down">
           <button mat-button class="nav-button">
@@ -45,30 +40,33 @@
           <i class="fa fa-github fa-2x"></i>
         </a>
 
-        <mat-menu #matmenu="matMenu">
-          <button mat-menu-item (click)="changeLanguage('en')">
-              <mat-icon>flag</mat-icon>
-              <span>
-              English
-          </span>
+        <div fxFlex class="text-right">
+          <button mat-icon-button [matMenuTriggerFor]="matmenu">
+              <mat-icon>public</mat-icon>
           </button>
-          <button mat-menu-item (click)="changeLanguage('es')">
-              <mat-icon>flag</mat-icon>
-              <span>
-              Español
-          </span>
-          </button>
-          <button mat-menu-item (click)="changeLanguage('pt-br')">
-              <mat-icon>flag</mat-icon>
-              <span>
-              Português
-          </span>
-          </button>
-      </mat-menu>
+          <mat-menu #matmenu="matMenu">
+              <button mat-menu-item (click)="changeLanguage('en')">
+                  <mat-icon>flag</mat-icon>
+                  <span>English</span>
+              </button>
+              <button mat-menu-item (click)="changeLanguage('es')">
+                  <mat-icon>flag</mat-icon>
+                  <span>Español</span>
+              </button>
+              <button mat-menu-item (click)="changeLanguage('pt-br')">
+                  <mat-icon>flag</mat-icon>
+                  <span>Português</span>
+              </button>
+          </mat-menu>
+          <a class="image-icon" href="#" target="_blank">
+              <img src="assets/images/github-circle-white-transparent.svg">
+          </a>
+      
+  </div>
   
       </mat-toolbar>
-      
-
+</mat-sidenav-container> 
+<div class="wrapper">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -80,9 +78,9 @@
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
-            <pre>
+            <p>
       themeSrc
-            </pre>
+            </p>
           </div>
           <div class="col-md-6">
             <h1>parent works!</h1>
@@ -108,4 +106,4 @@
   
     </div>
   
-  </mat-sidenav-container>
+  
